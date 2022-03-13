@@ -12,11 +12,13 @@
 // -create an event listener for the save button that puts this key value pair on local storage.
 // 5) On refresh, grab the data from local storage and display it in the correct time slot. 
 
+// Create Global variables
 var currentDayEl = $('#currentDat');
 var containerEl = $('.container');
 var currentHr = moment()
 .hour();
 
+// Make and array that holds the values of all hours in a day
 var dayHours = [
     moment().
     hour(9).
@@ -47,10 +49,33 @@ var dayHours = [
     format('HH:mm:ss'),
 ];
 
+// Find the section that has the hour for a time block
 var timeHour = $('col-1 hour')
-
+// Get the section for a tasks information
 var task = $('.description')
 
+// Get the current day and add it to the main section tag for the section with the class of jumbotron
 var currentDay = moment()
 .format('dddd, MMMM Do');
 currentDayEl.text(currentDay);
+
+function timeBlock(timeEvent) {
+    var currentHour = moment($(timeHour)
+    .text()
+    .trim(),
+    'hA')
+    .hour();
+
+    $(timeBlockEvent).removeClass('past present future');
+
+    // create if else statements to implement colors to the backgrounds dependent on set scheduled date
+    if (currentHour > timeHour) {
+        $(timeEvent).addClass('future');
+    } else if (currentHour === timeHour) {
+        $(timeEvent).addClass('present')
+    } else {
+        $(timeEvent).addClass('past')
+    }
+};
+
+// load up tasks

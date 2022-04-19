@@ -1,40 +1,55 @@
+   
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/7733a9cf21.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@200&display=swap" rel="stylesheet"
+    />
+    <!-- iconic -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <!-- css -->
     <link rel="stylesheet" href="./assets/style.css" />
-    <title>Calendar Time Manager</title>
+    <title>Calendar Scheduler</title>
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Calendar Time Manager</h1>
-      <p class="lead">A simple calendar app to help schedule your work week</p>
-      <p id="currentDay" class="lead"></p>
+
+    <header class="jumbotron m-0">
+      <h1 class="display-3 text-center">Calendar Scheduler</h1>
+      <p class="Heading p-3 m-0 text-white">
+        Welcome, you may schedule your times below
+      </p>
     </header>
-    <div class="container">
-      <!-- Time blocks go here -->
+
+    <div class="time-display sticky-top p-3 text-center">
+      <p id="dateNow" class="Heading p-2 m-0 text-white">CURRENT DAY</p>
+      <p id="timeNow" class="Heading p-1 m-0 text-white">TIME</p>
     </div>
 
+    <div class="container">
+    </div>
+
+    <!-- jquery link -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- moment link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- luxon link -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <!-- js link -->
     <script src="./assets/script.js"></script>
   </body>
 </html>

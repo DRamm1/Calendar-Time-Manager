@@ -1,76 +1,200 @@
+/* GENERAL BODY STYLES START */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #023047;
 }
 
-textarea{
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+/* Setting the margin bottom of the container class to 16px. */
+.container {
+  margin-bottom: 16px;
 }
 
+/* Setting the background color of the jumbotron to #023047, the color of the text to black, the border
+radius to 0, the border bottom to 10px solid #219ebc, and the padding to 40px. */
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: #023047;
   color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 12px;
+  padding: 40px;
 }
 
-.description{
-  white-space: pre-wrap;
-  width: 100%;
-  height: 100%;
-  color: black;
-  text-align: left;
-  margin: 5px;
+/* Changing the color of the h1 tag to #219ebc and making the font bold. */
+.jumbotron h1 {
+  color: #219ebc;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.time-block{
+.jumbotron p {
+  text-decoration: underline;
+}
+
+/* This is setting the font family, weight, and size of the Heading text in the jumbotron. */
+.jumbotron .Heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Setting the height of the row to 80px. */
+.row {
+  height: 80px;
+}
+
+/* Setting the background color of the time display to #023047. */
+.time-display {
+  background-color: #023047;
+}
+
+/* This is setting the text alignment to center and the border radius to 15px. */
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
-
+/* This is setting the font family, weight, and size of the hour text in the jumbotron. */
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  background-color: #8ecae6;
 }
 
+/* Setting the padding of the headingBottom and headingTop classes to 6px. */
+.headingBottom, .headingTop {
+  padding: 6px 6px;
+}
+
+/* This is setting the width of the hour column to 11% of the total width of the page. */
+.col-hour {
+	flex: 0 0 11%;
+	max-width: 11%;
+}
+
+/* Setting the border top of the headingBottom and bottomDescription classes to 1px dashed #023047. */
+.headingBottom, .bottomDescription {
+  border-top: 1px dashed #023047;
+}
+
+/* This is setting the border top of the headingTop and topDescription classes to 1px solid #023047. */
+.topDescription, .headingTop {
+  border-top: 1px solid #023047;
+}
+
+/* This is setting the font family, weight, and size of the text in the textarea. It is also setting
+the color of the text to #023047, the background to transparent, the border to none, and the resize
+to none. It is also setting the padding to 10px. */
+textarea {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+  background: transparent;
+  padding: 12px;
+}
+
+/* This is setting the outline to none, the border to 1px solid #8ecae6, the border top right radius to
+15px, the border bottom right radius to 15px, and the box shadow to 1px 1px 10px #8ecae6. */
+textarea:focus {
+  outline: none !important;
+  border: 1px solid #8ecae6;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 1px 1px 10px #8ecae6;
+}
+
+/* This is setting the background color of the description class to #eae8dd, the white space to
+pre-wrap,
+the border top right radius to 15px, and the border bottom right radius to 15px. */
+.description {
+  background-color: #eae8dd;
+  white-space: pre-wrap;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Setting the padding of the bottomDescription and topDescription classes to 6px. */
+.bottomDescription, .topDescription {
+  padding: 6px 6px;
+}
+
+/* This is setting the color of the saveBtn class to #023047 and the background color to #green
+when the mouse hovers over the saveBtn class. */
+.saveBtn:hover {
+  color: #023047;  
+  background-color: green;
+  transition: all 0.5s;
+}
+
+/* This is setting the font size of the span tag to 35px and the pointer events to none. */
+.saveBtn span {
+  font-size: 35px;
+  pointer-events: none; 
+}
+
+
+/* This is setting the width of the clear button column to 6% of the total width of the page. */
+.col-clear {
+	flex: 0 0 6%;
+	max-width: 8%;
+}
+
+/* This is setting the color of the clearBtn class to black and the background color to maroon
+when the mouse hovers over the clearBtn class. */
+.clearBtn:hover {
+  color: black;  
+  background-color: maroon;
+  transition: all 0.5s;
+}
+
+/* This is setting the font size of the span tag to 25px and the pointer events to none. */
+.clearBtn span {
+  font-size: 25px;
+  pointer-events: none; 
+}
+
+ /* This is setting the width of the clear button column to 8% of the total width of the page. */
+ .col-clear {
+  flex: 0 0 8%;
+  max-width: 8%;
+}
+
+/* This is setting the font size of the span tag to 20px and the padding top to 5px. */
+.clearBtn span {
+  font-size: 22px;
+  padding-top: 6px;
+}
+
+/* This is setting the background color of the past class to #0096c7. */
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: #0096c7;
 }
 
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
+/* This is setting the background color of the future class to #219ebc and the color of the text to
+white. */
 .future {
-  background-color: #77dd77;
+  background-color: #00FF00;
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
+ /* This is setting the font size of the span tag to 20px and the padding top to 5px and the padding
+ left to 4px. */
+  .saveBtn span {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+  /* This is setting the color of the saveBtn and clearBtn classes to white, the background color to
+#e76f51, the border top to 1px solid #023047, the border left to 1px solid #023047, and the border
+radius to 15px. */
+.saveBtn,
+.clearBtn {
+  color: white;
+  background-color: #e76f51;
+  border-top: 2px solid #023047;
+  border-left: 2px solid #023047;
+  border-radius: 13px;
 }

@@ -27,8 +27,8 @@ Live URL: https://dramm1.github.io/Calendar-Time-Manager/
 ------------------
 
 # Screenshots and Images:
-- ![](https://github.com/DRamm1/timed-quiz/blob/main/assests/media/calendarScreenshot.png)
-- ![](https://github.com/DRamm1/timed-quiz/blob/main/assests/media/calendar.gif)
+- ![](https://github.com/DRamm1/Calendar-Time-Manager/blob/main/assets/media/calendarScreenshot.png)
+- ![](https://github.com/DRamm1/Calendar-Time-Manager/blob/main/assets/media/calendar.gif)
 ------------------
  Additional Images and Information:
 

@@ -115,7 +115,7 @@ function createBlocks() {
     const btnEl = $("<button>")
       .addClass("saveBtn col-1 btn")
       .attr("onclick", "saveEvents(event, '" + hourTime[i] + "')")
-      .attr("onkeypress", "return enterKeyPressed(event)");
+      .attr("onkeypress", "return pressedKey(event)");
 
     const spanEl = $("<span>").addClass(
       "fa-solid fa-square-check d-flex justify-content-center"
@@ -126,7 +126,7 @@ function createBlocks() {
     const clearEl = $("<button>")
       .addClass("clearBtn col-clear btn")
       .attr("onclick", "clearEvents(event, '" + hourTime[i] + "')")
-      .attr("onkeypress", "return enterKeyPressed(event)");
+      .attr("onkeypress", "return pressedKey(event)");
 
     const spanClearEl = $("<span>").addClass(
       "fa fa-delete-left d-flex justify-content-center"
@@ -146,7 +146,7 @@ createBlocks();
  * than the current time, the text area is given the class of "past". If the time block is greater than
  * the current time, the text area is given the class of "future".
  */
-function timeComparison() {
+function timeCompare() {
   let currHR = moment()
   .format("HH");
   let currTime = parseInt(currHR);
@@ -168,7 +168,7 @@ function timeComparison() {
     }
   }
 }
-timeComparison();
+timeCompare();
 
 /**
  * It takes the value of the txtArea and pushes them into an array.
@@ -209,7 +209,7 @@ function saveEvents(event, eventTime) {
  * @param event - The event object.
  * @returns The return value is the value of the last expression evaluated.
  */
-function enterKeyPressed(event) {
+function pressedKey(event) {
   if (event.keyCode == 13) {
     saveScore();
     return true;
